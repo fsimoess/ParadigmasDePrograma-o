@@ -30,6 +30,7 @@ charFound _ "" = False
 charFound x y = if x == (head y) then True else charFound x (tail y)
 
 --takeWhile (even) [2, 4, 6, 8, 10, 11]
+--Resposta: [2, 4, 6, 8, 10]
 
 lastChar :: [String] -> [String]
 lastChar lis = filter ((\x -> last x == 'a')) lis
