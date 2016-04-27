@@ -75,3 +75,10 @@ comissao(N,[_|T1],T2) :-
   comissao(N,T1,T2).
 
 %Exercicio 10
+azulejos(0,0) :- !.
+azulejos(NA,NQ) :-
+  sqrt(NA,X),
+  floor(X,N),
+  N1 is NA - N*N,
+  azulejos(N1,N2),
+  NQ is 1 + N2.
